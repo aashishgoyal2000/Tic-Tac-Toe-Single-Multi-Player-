@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="Style/multiplayer.css">
+    <script type="text/javascript" src="JavaScript/multiplayer.js"></script>
+</head>
+<body>
+
+	<div style="color: white; margin-left: auto;">
+	<center>
+		<h1 style=" margin-bottom: 0px; font-size: 80px; margin-top:0px;">Tic Tac Toe</h1>
+		<sub style="font-size: 25px;">Single Player</sub>
+	</center>
+	</div>
+
+    <div style=" margin-top: 50px;">
+        <center>
+            <input style="padding:10px; border-radius:10px;" type="button" value="New Game" onclick="resetBoard()" />
+            <input style="padding:10px; border-radius:10px;" type="button" value="Undo" onclick="undi()" />
+        </center>
+        <table style="margin: auto; margin-top:10px">
+
+            <tr>
+                <td>
+                    <input type="button" id="1" onclick="checkGoal(1)" value=" " style="min-height: 70px; min-width: 70px;">
+                </td>
+                <td>
+                    <input type="button" id="2" onclick="checkGoal(2)" value=" " style="min-height: 70px; min-width: 70px;">
+                </td>
+                <td>
+                    <input type="button" id="3" onclick="checkGoal(3)" value=" " style="min-height: 70px; min-width: 70px;">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="button" id="4" onclick="checkGoal(4)" value=" " style="min-height: 70px; min-width: 70px;">
+                </td>
+                <td>
+                    <input type="button" id="5" onclick="checkGoal(5)" value=" " style="min-height: 70px; min-width: 70px;">
+                </td>
+                <td>
+                    <input type="button" id="6" onclick="checkGoal(6)" value=" " style="min-height: 70px; min-width: 70px;">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="button" id="7" onclick="checkGoal(7)" value=" " style="min-height: 70px; min-width: 70px;">
+                </td>
+                <td>
+                    <input type="button" id="8" onclick="checkGoal(8)" value=" " style="min-height: 70px; min-width: 70px;">
+                </td>
+                <td>
+                    <input type="button" id="9" onclick="checkGoal(9)" value=" " style="min-height: 70px; min-width: 70px;">
+                </td>
+            </tr>
+
+        </table>
+    </div>
+    <table style="float: left;">
+        <tr>
+            <td colspan="2">
+                <center><input type="text" name="user1" class="userName" id="playerName2" onkeyup="setName('playerName2')" placeholder="Enter Your Name"></center>
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="2">
+                <img src="../SinglePlayer/Style/user2.png" class="userIMG" id="userIMG1">
+            </td>
+            <td>
+                <input type="button" class="sexbtn" value="Male / Female" onclick="toggleIMG('userIMG1')" />
+            </td>
+        </tr>
+    </table>
+
+
+
+    <table style="float: right;">
+        <tr>
+            <td colspan="2">
+                <center><input type="button" value="Bot" name="user2" class="userName" id="playerName1"></center>
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="2">
+                <img src="C:/Users/Dell/Desktop/Tic Tac Toe/SinglePlayer/Style/bot.png" class="userIMG" id="userIMG2">
+            </td>
+        </tr>
+    </table>
+
+    <div style="color: white;">
+    	<center>
+    		<h3 style="color: grey; font-size: 35px">Score Counter</h3>
+    		<table>
+    			<tr>
+    				<th class="score1" id="setplayerName1">Player 1</th>
+    				<th class="score1" id="setplayerName2">Bot</th>
+    			</tr>
+    			<tr>
+    				<td class="score1" id="X">0</td>
+    				<td class="score1" id="0">0</td>
+    			</tr>
+    		</table>
+
+    	</center>
+
+    </div>
+
+</body>
+</html>
